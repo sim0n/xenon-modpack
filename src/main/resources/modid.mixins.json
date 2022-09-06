@@ -1,12 +1,16 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "dev.sim0n.modpack.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "MixinKeyboard",
+    "MixinClientPlayerEntity",
+    "MixinInGameHud",
+    "MixinTitleScreen",
+    "MixinClientPlayNetworkHandler"
   ],
   "injectors": {
     "defaultRequire": 1

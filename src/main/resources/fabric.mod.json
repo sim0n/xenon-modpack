@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "dev.sim0n.modpack.ModPackInitializer"
     ]
   },
   "mixins": [
