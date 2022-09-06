@@ -1,4 +1,14 @@
-# Fabric Example Mod
+# xenon-modpack
+
+Xenon ModPack is a simple to use base for the creation of modpacks.
+
+## Features
+* Mod System
+* (Key) Binding system
+* Property System
+* EventBus
+* Rendering utilities
+* Tab UI
 
 ## Setup
 
