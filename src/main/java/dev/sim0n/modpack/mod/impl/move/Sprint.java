@@ -33,7 +33,7 @@ public class Sprint extends Mod {
     private final OptionProperty test4 = new OptionProperty("test4", 0, "test", "test2", "test3")
             .buildAndBind(this);
 
-    private final MultiOptionProperty test5 = new MultiOptionProperty("test5", new int[] {0, 1}, "test", "test2", "test3")
+    private final MultiOptionProperty test5 = new MultiOptionProperty("test5", "test", "test2", "test3")
             .buildAndBind(this);
 
     public Sprint() {

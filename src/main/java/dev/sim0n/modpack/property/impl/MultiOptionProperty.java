@@ -19,8 +19,8 @@ public class MultiOptionProperty extends AbstractProperty<int[]> {
 
     private final List<String> selectedOptions = new ArrayList<>();
 
-    public MultiOptionProperty(String label, int[] value, String... options) {
-        super(label, value);
+    public MultiOptionProperty(String label, String... options) {
+        super(label, new int[options.length]);
 
         this.options = options;
         this.size = options.length;
