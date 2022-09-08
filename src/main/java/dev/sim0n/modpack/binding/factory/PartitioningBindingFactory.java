@@ -1,5 +1,7 @@
-package dev.sim0n.modpack.binding;
+package dev.sim0n.modpack.binding.factory;
 
+import dev.sim0n.modpack.binding.Binding;
+import dev.sim0n.modpack.binding.BindingFactory;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Set;

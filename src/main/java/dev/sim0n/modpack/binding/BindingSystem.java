@@ -18,7 +18,6 @@ public interface BindingSystem {
      */
     Binding makeBinding(Runnable action, Set<Integer> requiredKeyCodes);
 
-
     boolean unbind(Binding binding);
 
     /**

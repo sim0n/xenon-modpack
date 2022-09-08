@@ -1,5 +1,6 @@
 package dev.sim0n.modpack.binding;
 
+import dev.sim0n.modpack.binding.factory.SimpleBindingFactory;
 import dev.sim0n.modpack.event.impl.game.key.KeyState;
 import lombok.Getter;
 
