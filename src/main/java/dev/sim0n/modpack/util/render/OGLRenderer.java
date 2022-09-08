@@ -39,12 +39,7 @@ public class OGLRenderer implements MCHelper {
     public void filledRect(FVec2 pos, FVec2 size, Color color) {
         RenderSystem.enableBlend();
         RenderSystem.disableTexture();
-        RenderSystem.blendFuncSeparate(
-                GlStateManager.SrcFactor.SRC_ALPHA,
-                GlStateManager.DstFactor.ONE_MINUS_SRC_ALPHA,
-                GlStateManager.SrcFactor.ONE,
-                GlStateManager.DstFactor.ZERO
-        );
+        RenderSystem.defaultBlendFunc();
 
         var red = color.getRed();
         var green = color.getGreen();
@@ -75,8 +70,8 @@ public class OGLRenderer implements MCHelper {
 
         builder.clear();
         BufferRenderer.drawWithShader(builder.end());
-        RenderSystem.disableBlend();
         RenderSystem.enableTexture();
+        RenderSystem.disableBlend();
     }
 
     /**

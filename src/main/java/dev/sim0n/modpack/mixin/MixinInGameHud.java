@@ -21,7 +21,7 @@ public class MixinInGameHud implements MCHelper {
     private long lastSystemTime;
     private int renderTick;
 
-    @Inject(method = "render", at = @At("RETURN"))
+    @Inject(method = "render", at = @At("TAIL"))
     public void render(MatrixStack matrices, float tickDelta, CallbackInfo info) {
         var now = System.currentTimeMillis();
         var window = mc.getWindow();

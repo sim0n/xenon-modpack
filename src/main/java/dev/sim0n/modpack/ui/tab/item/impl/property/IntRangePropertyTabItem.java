@@ -61,10 +61,12 @@ public class IntRangePropertyTabItem extends PropertyTabItem<IntRangeProperty> {
         var value = upper ? this.property.getValue().getUpper() : this.property.getValue().getLower();
         String valueText = "" + value;
 
+        matrices.push();
         matrices.scale(0.5F, 0.5F, 0F);
         mc.textRenderer.drawWithShadow(matrices, (upper ? "Max " : "Min ") + this.property.getLabel(), (x + 8) * 2, (y + 2) * 2, Color.WHITE.getRGB());
         mc.textRenderer.drawWithShadow(matrices, valueText, (x + width - 3 - mc.textRenderer.getWidth(valueText) / 2.f) * 2, (y + 2) * 2, Color.WHITE.getRGB());
         matrices.scale(2F, 2F, 2F);
+        matrices.pop();
 
         for (var i = 0; i < 4; i++) {
             float x1 = 4 - i * 0.5F;

@@ -46,6 +46,7 @@ public class IntPropertyTabItem extends PropertyTabItem<IntProperty> {
         if (this.focused)
             OGLRenderer.filledRect(new FVec2(x, y), new FVec2(width, 13), new Color(5, 5, 5));
 
+        matrices.push();
         matrices.scale(0.5F, 0.5F, 0F);
         mc.textRenderer.drawWithShadow(matrices, this.property.getLabel(), (x + 3) * 2, (y + 2) * 2, Colors.WHITE.getRGB());
 
@@ -53,6 +54,7 @@ public class IntPropertyTabItem extends PropertyTabItem<IntProperty> {
 
         mc.textRenderer.drawWithShadow(matrices, valueText, (x + width - 3 - mc.textRenderer.getWidth(valueText) / 2.f) * 2, (y + 2) * 2, Colors.WHITE.getRGB());
         matrices.scale(2F, 2F, 2F);
+        matrices.pop();
 
         OGLRenderer.filledRect(new FVec2(x + 3, y + 8), new FVec2((width - 6), 1), Colors.GREY);
         OGLRenderer.filledRect(new FVec2(x + 3, y + 8), new FVec2((width - 6) * (this.getProperty().getValue() / (float) this.getProperty().getMax()), 1), this.focused ? Colors.ACCENT : Color.WHITE);
